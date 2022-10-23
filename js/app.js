@@ -93,7 +93,10 @@ const DibujarProductos = () => {
         `;
     container_products.append(div);
     const boton = document.getElementById(`agregar${product.id}`);
-    boton.addEventListener("click", () => AddToCart(product.id));
+    boton.addEventListener("click", () => {
+      AddToCart(product.id);
+      Swal.fire("Agregado al carrito");
+    });
   });
 };
 
